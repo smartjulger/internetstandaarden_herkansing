@@ -64,10 +64,10 @@ section {
 }
 
 h2 {
-        font-size: 2em;
+    font-size: 2em;
 }
 
-img{
+img {
     max-width: 60%;
 
 }
@@ -76,9 +76,20 @@ p {
     font-size: 1em;
     padding: 0.1em;
     text-align: justify;
-    /* Tekst mooi uitlijnen */
+
 }
-/*css voor pagine mijn_ervaring*/
+
+body.fotografie img:nth-child(n) {
+    width: 475px;
+    height: 475px;
+    display: inline;
+    padding: 5px;
+}
+
+body.fotografie img:nth-child(n):hover {
+    transform: scale(1.05);
+    transition: all 250ms;
+}
 
 
 /* Voor schermen kleiner dan 1024px */
