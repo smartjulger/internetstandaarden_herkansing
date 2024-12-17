@@ -8,19 +8,15 @@ body {
 
 main {
     max-width: 70vw;
-    /* Maximale breedte */
     margin: auto;
-    /* Centreer de content */
     background-color: #F0FFF0;
 }
 
-/*css voor de index.html*/
 ul {
     display: flex;
     justify-content: center;
     border: 1em solid #E6FFE9;
     background-color: #E6FFE9;
-    margin-bottom: 0;
     list-style: none;
 }
 
@@ -35,92 +31,113 @@ a {
     border: 0.5em solid #E6FFE9;
     padding: 0.5em;
     border-radius: 0.2em;
-    background-color: green;
+    background-color: #0057C2;
     color: lightgreen;
     transition: all 250ms;
 }
 
 a:hover {
-    background-color: darkgreen;
-    border: 0.01em solid darkgreen;
+    background-color: rgb(47, 0, 255);
+    border: 0.01em solid rgb(0, 217, 255);
 }
 
 h1 {
     text-align: center;
+    font-weight: bolder;
+    
 }
 
 section {
     display: flex;
     flex-direction: column;
-    /* Plaatst alle elementen verticaal */
     align-items: center;
-    /* Centreer alles horizontaal */
     text-align: center;
-    /* Centreer tekstinhoud */
     border: 2px solid black;
     border-radius: 20px;
     margin: 1em auto;
     padding: 0.4em;
+    background-color: aquamarine;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 img {
-    max-width: 60%;
-
+    max-width: 70%;
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.3em;
     padding: 0.1em;
     text-align: justify;
-
+    font-family: 'Times New Roman', Times, serif;
 }
 
-body.fotografie img:nth-child(n) {
-    width: 475px;
-    height: 475px;
-    display: inline;
-    padding: 5px;
+footer {
+    display: flex;
+    justify-content: center;
 }
 
-body.fotografie img:nth-child(n):hover {
+/* CSS voor pagina mijn ervaring */
+body.mijn_ervaring p:nth-of-type(1) {
+    border-bottom: 0.1em solid black;
+    border-radius: 0.5em;
+}
+
+/* CSS voor pagina fotografie */
+body.fotografie section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    justify-items: center;
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+body.fotografie section h1 {
+    grid-column: span 2;
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+body.fotografie section img {
+    width: 100%;
+    max-width: 512px;
+    transition: transform 250ms ease-in-out;
+}
+
+body.fotografie section img:hover {
     transform: scale(1.05);
-    transition: all 250ms;
 }
 
-
-/* Voor schermen kleiner dan 1024px */
+/* Responsive layout */
 @media (max-width: 1024px) {
     section {
         flex-direction: column;
-        /* Zet flexbox op kolom */
         text-align: center;
     }
 
     img {
         max-width: 70%;
-        /* Vergroot afbeelding bij kleiner scherm */
     }
 
     p {
         font-size: 1em;
-        /* Kleinere tekst voor betere leesbaarheid */
     }
 }
 
-/* Voor schermen kleiner dan 768px */
 @media (max-width: 768px) {
     h2 {
         font-size: 1.5em;
-        /* Maak titel kleiner */
     }
 
     img {
         max-width: 90%;
-        /* Afbeeldingen nemen bijna de hele breedte in */
     }
 
     p {
@@ -130,12 +147,25 @@ body.fotografie img:nth-child(n):hover {
 
     section {
         padding: 10px;
-        /* Minder padding voor kleinere schermen */
+    }
+
+    body.fotografie section {
+        grid-template-columns: 1fr;
+    }
+
+    body.fotografie section h1 {
+        grid-column: span 1;
     }
 }
 
-/* Voor schermen kleiner dan 480px */
 @media (max-width: 500px) {
+    body.fotografie section {
+        grid-template-columns: 1fr;
+    }
+
+    body.fotografie section h1 {
+        grid-column: span 1;
+    }
 
     a {
         font-size: 0.7em;
@@ -143,23 +173,18 @@ body.fotografie img:nth-child(n):hover {
 
     h2 {
         font-size: 1em;
-        /* Nog kleinere titel */
     }
 
     img {
         max-width: 100%;
-        /* Volledige breedte */
     }
 
     p {
         font-size: 0.8em;
-        /* Kleinere tekst */
     }
 
     section {
         margin: 10px;
         padding: 5px;
     }
-
-
 }
