@@ -1,0 +1,157 @@
+/* Basis layout voor grote schermen */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E6FFE9;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 80vw;
+    /* Maximale breedte */
+    margin: auto;
+    /* Centreer de content */
+    background-color: #F0FFF0;
+}
+
+/*css voor de index.html*/
+ul {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #E6FFE9;
+    background-color: #E6FFE9;
+    margin-bottom: 0px;
+    list-style: none;
+}
+
+li {
+    margin: 2em;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    border: 1em solid #E6FFE9;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    background-color: green;
+    color: lightgreen;
+    transition: all 250ms;
+}
+
+a:hover {
+    background-color: darkgreen;
+    border: 2px solid darkgreen;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    /* Plaatst alle elementen verticaal */
+    align-items: center;
+    /* Centreer alles horizontaal */
+    text-align: center;
+    /* Centreer tekstinhoud */
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 2em auto;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 1em;
+    /* Voeg ruimte toe onder de titel */
+    font-size: 3em;
+}
+
+img{
+    max-width: 60%;
+
+}
+
+p {
+    font-size: 2em;
+    padding: 10px;
+    text-align: justify;
+    /* Tekst mooi uitlijnen */
+}
+
+/*css voor pagine mijn_ervaring*/
+
+
+/* Voor schermen kleiner dan 1024px */
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+        /* Zet flexbox op kolom */
+        text-align: center;
+    }
+
+    img {
+        max-width: 70%;
+        /* Vergroot afbeelding bij kleiner scherm */
+    }
+
+    p {
+        font-size: 1em;
+        /* Kleinere tekst voor betere leesbaarheid */
+    }
+}
+
+/* Voor schermen kleiner dan 768px */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+        /* Maak titel kleiner */
+    }
+
+    img {
+        max-width: 90%;
+        /* Afbeeldingen nemen bijna de hele breedte in */
+    }
+
+    p {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    section {
+        padding: 10px;
+        /* Minder padding voor kleinere schermen */
+    }
+}
+
+/* Voor schermen kleiner dan 480px */
+@media (max-width: 500px) {
+
+    a {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        /* Nog kleinere titel */
+    }
+
+    img {
+        max-width: 100%;
+        /* Volledige breedte */
+    }
+
+    p {
+        font-size: 0.8em;
+        /* Kleinere tekst */
+    }
+
+    section {
+        margin: 10px;
+        padding: 5px;
+    }
+
+
+}
